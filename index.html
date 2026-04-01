@@ -3,18 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Papiya Akther</title>
+<title>Dr Papiya Akther</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
+
+/* 🌈 Moving Gradient Background */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f9fafb;
-  color: #111;
+  background: linear-gradient(-45deg, #e0f2fe, #f0f9ff, #e0e7ff, #fce7f3);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .container {
@@ -23,69 +31,94 @@ body {
   margin: auto;
 }
 
+/* NAV */
 .nav {
-  position: sticky;
-  top: 0;
-  background: white;
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
   padding: 15px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  top: 0;
   z-index: 1000;
 }
 
-.nav h2 {
-  margin: 0;
-}
-
+/* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 140px 20px 100px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.hero p {
-  color: #555;
-}
-
+/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 20px;
-  background: #2563eb;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
   color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
+  padding: 12px 28px;
+  border-radius: 30px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  transform: scale(1.08);
+}
+
+/* SECTION */
 .section {
-  padding: 70px 20px;
+  padding: 80px 20px;
 }
 
+/* GLASS CARD */
 .card {
-  background: white;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 20px;
   margin-top: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.4s;
 }
 
+/* 🍎 Apple-style hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 20px;
 }
 
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
   color: white;
-  padding: 15px;
+  padding: 16px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 22px;
   text-decoration: none;
 }
 
@@ -96,54 +129,57 @@ body {
 
 <div class="nav">
   <div class="container">
-    <h2>Dr. Papiya</h2>
+    <h3>Dr Papiya Akther</h3>
   </div>
 </div>
 
 <div class="hero" data-aos="fade-up">
-  <h1>Dr. Papiya Akther</h1>
-  <p>Pediatrician | Child Health Specialist</p>
-
-  <a href="#contact" class="btn">Book Appointment</a>
+  <h1>Dr Papiya Akther</h1>
+  <p>Pediatrician | 7+ Years Experience</p>
+  <a href="#appointment" class="btn">Book Appointment</a>
 </div>
 
 <div class="section container" data-aos="fade-up">
-  <h2>About Me</h2>
+  <h2>About</h2>
   <div class="card">
-    <p>I am a dedicated pediatrician focused on providing quality healthcare for children with compassion and care.</p>
+    <p>Experienced pediatrician with 7 years of dedicated service in child healthcare and patient-centered treatment.</p>
   </div>
 </div>
 
 <div class="section container" data-aos="fade-up">
   <h2>Services</h2>
   <div class="grid">
-    <div class="card">Child Consultation</div>
-    <div class="card">Vaccination</div>
-    <div class="card">Growth Monitoring</div>
+    <div class="card">👶 Child Consultation</div>
+    <div class="card">💉 Vaccination</div>
+    <div class="card">📊 Growth Monitoring</div>
   </div>
 </div>
 
 <div class="section container" data-aos="fade-up">
-  <h2>Experience</h2>
+  <h2>Clinic Location</h2>
   <div class="card">
-    <p>MBBS | Pediatric Specialist<br>5+ Years Experience</p>
+    <iframe src="https://www.google.com/maps?q=Al+Haramain+Hospital+Sylhet&output=embed"
+    width="100%" height="300" style="border-radius:15px;"></iframe>
   </div>
 </div>
 
-<div id="contact" class="section container" data-aos="fade-up">
-  <h2>Contact</h2>
+<div id="appointment" class="section container" data-aos="fade-up">
+  <h2>Book Appointment</h2>
   <div class="card">
-    <p>📞 Phone: 01601265606</p>
-    <p>📧 Email: aktherpapiya018@gmail.com</p>
+    <form action="https://formsubmit.co/aktherpapiya018@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" placeholder="Describe your problem"></textarea>
+      <button class="btn" type="submit">Submit</button>
+    </form>
   </div>
 </div>
 
-<!-- WhatsApp Button -->
 <a href="https://wa.me/8801601265606" class="whatsapp">💬</a>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init();
+AOS.init({ duration: 1000 });
 </script>
 
 </body>
