@@ -30,7 +30,6 @@
         }
 
         * {
-            cursor: default;
         }
 
         body {
@@ -122,7 +121,7 @@
         }
 
         .apple-card:hover {
-            transform: translateY(-12px) scale(1.03);
+            scale: 1.03;
             box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.12);
             background: rgba(255, 255, 255, 0.85);
         }
@@ -149,7 +148,6 @@
         }
 
         .btn-premium:hover {
-            transform: translateY(-3px);
             box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.4);
         }
 
@@ -287,7 +285,6 @@
     </div>
 
     <div id="progress-bar"></div>
-    <div id="cursor"></div>
 
     <!-- Background Blobs -->
     <div class="blob blob-1"></div>
@@ -310,7 +307,7 @@
                 <a href="#about" class="hover:text-indigo-600 transition-colors interactive">About</a>
                 <a href="#services" class="hover:text-indigo-600 transition-colors interactive">Services</a>
                 <a href="#location" class="hover:text-indigo-600 transition-colors interactive">Clinic</a>
-                <a href="#appointment" class="bg-indigo-600 text-white px-8 py-3 rounded-full font-bold shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition-all btn-premium interactive">Book Now</a>
+                <a href="https://wa.me/8801601265606" target="_blank" class="bg-indigo-600 text-white px-8 py-3 rounded-full font-bold shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition-all btn-premium interactive">Book Now</a>
             </div>
             <button class="md:hidden interactive">
                 <i data-lucide="menu"></i>
@@ -333,8 +330,8 @@
                 Dr. Papiya Akther provides world-class pediatric consultation with 7 years of expertise at Al Haramain Hospital.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="#appointment" class="w-full sm:w-auto bg-indigo-600 text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl shadow-indigo-200 btn-premium interactive flex items-center justify-center gap-3">
-                    Book Appointment <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                <a href="https://wa.me/8801601265606" target="_blank" class="w-full sm:w-auto bg-indigo-600 text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl shadow-indigo-200 btn-premium interactive flex items-center justify-center gap-3">
+                    Book Appointment <i data-lucide="message-circle" class="w-5 h-5"></i>
                 </a>
                 <a href="#services" class="w-full sm:w-auto glass px-12 py-5 rounded-full font-bold text-xl hover:bg-white transition-all interactive">
                     Our Services
@@ -562,7 +559,7 @@
                         <h4 class="text-xl font-bold">How can I book an appointment?</h4>
                         <i data-lucide="plus" class="w-6 h-6 text-indigo-600 group-hover:rotate-90 transition-transform"></i>
                     </div>
-                    <p class="mt-4 text-slate-500 hidden group-hover:block transition-all">You can book via the form on this website, call +880 1601 265606, or message us on WhatsApp.</p>
+                    <p class="mt-4 text-slate-500 hidden group-hover:block transition-all">You can book by messaging us directly on WhatsApp at +880 1601 265606 for a quick response.</p>
                 </div>
             </div>
         </div>
@@ -604,40 +601,27 @@
 
     <!-- Appointment Section -->
     <section id="appointment" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-5xl md:text-7xl font-extrabold mb-6">Let's Connect.</h2>
-                <p class="text-xl text-slate-500">Secure your child's health today with a simple booking.</p>
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-20" data-aos="fade-up">
+                <h2 class="text-5xl md:text-7xl font-extrabold mb-6">Ready to Book?</h2>
+                <p class="text-xl text-slate-500">Skip the forms. Connect with us directly on WhatsApp for instant booking and consultation.</p>
             </div>
             
-            <div class="glass p-12 md:p-16 rounded-[4rem] relative overflow-hidden" data-aos="fade-up">
+            <div class="glass p-12 md:p-20 rounded-[4rem] relative overflow-hidden flex flex-col items-center" data-aos="fade-up">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-100 blur-[100px] rounded-full opacity-50"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-pink-100 blur-[100px] rounded-full opacity-50"></div>
                 
-                <form action="https://formsubmit.co/aktherpapiya018@gmail.com" method="POST" class="space-y-8 relative z-10">
-                    <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_subject" value="New Appointment Request">
-                    <input type="hidden" name="_next" value="https://PapiyaAkther.github.io/thankyou.html">
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-2">
-                            <label class="text-xs font-extrabold uppercase tracking-widest text-slate-400 ml-4">Full Name</label>
-                            <input type="text" name="name" placeholder="Enter your name" required class="w-full px-8 py-5 rounded-[2rem] glass-dark border-transparent focus:bg-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none interactive">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-xs font-extrabold uppercase tracking-widest text-slate-400 ml-4">Phone Number</label>
-                            <input type="tel" name="phone" placeholder="Enter your phone" required class="w-full px-8 py-5 rounded-[2rem] glass-dark border-transparent focus:bg-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none interactive">
-                        </div>
+                <div class="relative z-10 space-y-10">
+                    <div class="w-24 h-24 bg-[#25D366] rounded-[2rem] flex items-center justify-center text-white mx-auto shadow-2xl shadow-green-200">
+                        <i data-lucide="message-circle" class="w-12 h-12"></i>
                     </div>
-                    <div class="space-y-2">
-                        <label class="text-xs font-extrabold uppercase tracking-widest text-slate-400 ml-4">Message / Concerns</label>
-                        <textarea name="message" placeholder="Tell us about your child's health..." rows="5" required class="w-full px-8 py-5 rounded-[2rem] glass-dark border-transparent focus:bg-white focus:ring-2 focus:ring-indigo-500 transition-all outline-none interactive"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-indigo-600 text-white py-6 rounded-[2rem] font-extrabold text-xl shadow-2xl shadow-indigo-100 btn-premium interactive">
-                        Confirm Appointment
-                    </button>
-                </form>
+                    <h3 class="text-3xl md:text-4xl font-extrabold">Direct WhatsApp Booking</h3>
+                    <p class="text-lg text-slate-500 max-w-md mx-auto">Click the button below to start a conversation with our clinic staff. We're here to help you 24/7.</p>
+                    <a href="https://wa.me/8801601265606" target="_blank" class="inline-flex items-center gap-4 bg-[#25D366] text-white px-12 py-6 rounded-[2rem] font-extrabold text-2xl shadow-2xl shadow-green-100 hover:scale-105 transition-all interactive">
+                        Chat on WhatsApp <i data-lucide="external-link" class="w-6 h-6"></i>
+                    </a>
+                    <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-6">Average response time: <span class="text-green-500">Under 5 mins</span></p>
+                </div>
             </div>
         </div>
     </section>
@@ -654,17 +638,11 @@
             <div class="flex gap-10 text-sm font-bold text-slate-400 uppercase tracking-widest">
                 <a href="#about" class="hover:text-indigo-600 transition-colors interactive">About</a>
                 <a href="#services" class="hover:text-indigo-600 transition-colors interactive">Services</a>
-                <a href="#appointment" class="hover:text-indigo-600 transition-colors interactive">Contact</a>
+                <a href="https://wa.me/8801601265606" target="_blank" class="hover:text-indigo-600 transition-colors interactive">Book Now</a>
             </div>
             <p class="text-slate-400 text-sm font-medium">© 2026 All Rights Reserved.</p>
         </div>
     </footer>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/8801601265606" target="_blank" class="fixed bottom-10 right-10 z-[100] w-20 h-20 bg-[#25D366] text-white rounded-[2rem] flex items-center justify-center shadow-2xl shadow-green-200 hover:scale-110 transition-transform interactive group">
-        <i data-lucide="message-circle" class="w-10 h-10 group-hover:rotate-12 transition-transform"></i>
-        <span class="absolute right-full mr-4 bg-white text-slate-800 px-4 py-2 rounded-xl text-xs font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat with us</span>
-    </a>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -710,13 +688,6 @@
             }
         };
 
-        // Custom Cursor Logic
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX - 15 + 'px';
-            cursor.style.top = e.clientY - 15 + 'px';
-        });
-
         // Mouse Parallax for Blobs
         document.addEventListener('mousemove', (e) => {
             const x = (e.clientX / window.innerWidth) - 0.5;
@@ -725,22 +696,6 @@
             document.querySelectorAll('.blob').forEach((blob, index) => {
                 const speed = (index + 1) * 20;
                 blob.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-            });
-        });
-
-        // Magnetic Button Effect
-        const magneticBtns = document.querySelectorAll('.interactive');
-        magneticBtns.forEach(btn => {
-            btn.addEventListener('mousemove', (e) => {
-                const position = btn.getBoundingClientRect();
-                const x = e.pageX - position.left - position.width / 2;
-                const y = e.pageY - position.top - position.height / 2;
-                
-                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-            });
-            
-            btn.addEventListener('mouseleave', () => {
-                btn.style.transform = 'translate(0px, 0px)';
             });
         });
 
@@ -760,3 +715,4 @@
     </script>
 </body>
 </html>
+
